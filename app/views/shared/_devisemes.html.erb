@@ -1,0 +1,7 @@
+ <% unless resource.errors.empty? %>
+  <script>
+    <% resource.errors.full_messages.each do |v| %>
+      toastr.error('<%= v %>')
+    <% end %>
+  </script>
+ <% end %>
