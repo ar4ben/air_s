@@ -19,12 +19,13 @@
         <%= link_to "Forgot Password", new_user_password_path %>
       </span>
       </div>
+      <br>
 
       <div class="actions">
-        <%= f.submit "Log in", class: 'btn btn-primaty' %>
+        <%= f.submit "Log in", class: 'btn btn-normal btn-block' %>
       </div>
       <hr>
-      <%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path, class: 'btn btn-primary' %>
+      <%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path, class: 'btn btn-facebook btn-block' %>
     <% end %>
   </div>
 </div>
