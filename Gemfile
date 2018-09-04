@@ -56,3 +56,4 @@ gem 'devise', '~> 4.2'
 gem 'toastr-rails', '~> 1.0'
 gem 'omniauth-google-oauth2'
 gem "figaro"
+gem 'paperclip', '~> 5.1.0'
