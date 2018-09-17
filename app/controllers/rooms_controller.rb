@@ -21,6 +21,10 @@ class RoomsController < ApplicationController
     end
   end
 
+  def show
+    @photos = @room.photos
+  end
+
   def listing
   end
 
@@ -58,7 +62,7 @@ class RoomsController < ApplicationController
     end
 
     def is_authorized
-      redirect_to root_path, alert: "You dont have permission" unless current_user.id == @room.user_id
+      redirect_to root_path, alert: "You dont have permission" if current_user && current_user.id != @room.user_id
     end
 
     def room_params
