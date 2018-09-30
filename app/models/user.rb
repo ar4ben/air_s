@@ -8,7 +8,9 @@ class User < ApplicationRecord
   validates :fullname, presence: true, length: {maximum: 50}
 
   has_many :rooms
-  has_many :reservations
+
+  has_many :guest_reviews, class_name: "GuestReview", foreign_key: "guest_id"
+  has_many :host_reviews, class_name: "HostReview", foreign_key: "host_id"
 
   def self.from_omniauth(auth)
     data = auth.info
