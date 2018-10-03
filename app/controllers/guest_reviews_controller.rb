@@ -1,4 +1,4 @@
-class GuestReviewsController < ApplicationComtroller
+class GuestReviewsController < ApplicationController
   def create
     #Check if reservation exists
 
@@ -37,6 +37,6 @@ class GuestReviewsController < ApplicationComtroller
 
   private
     def guest_reviews_params
-      params.require(:guest_review).permit(:comment. :star, :room_id, :reservation_id, :host_id)
+      params.require(:guest_review).permit(:comment, :star, :room_id, :reservation_id, :host_id)
     end
 end
