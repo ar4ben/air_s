@@ -1,1 +1,1 @@
-# Airbnb clone
+# Apartment rental app
